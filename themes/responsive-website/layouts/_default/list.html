@@ -1,0 +1,23 @@
+{{partial "head" .}}
+
+<header>
+    {{partial "header" .}}
+    {{partial "nav" .}}
+</header>
+
+<main>
+    <h1>{{ .Title | singularize }}</h1>
+
+			{{ range .Data.Pages }}
+			<a href="{{ .Permalink }}" title="{{ .Title }}">
+				<h2>{{ .Title }}</h2>
+			</a>
+
+			<br>
+			{{ printf "%s" .Summary | markdownify }}
+
+			<hr>
+			{{ end }}
+</main>
+
+{{partial "footer" .}}

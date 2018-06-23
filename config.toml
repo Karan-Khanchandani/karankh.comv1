@@ -1,3 +1,6 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Karan Khanchandani"
+theme = "responsive-website"
+metadataformat = "yaml"
+canonifyurls = true
