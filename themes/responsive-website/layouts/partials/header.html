@@ -1,10 +1,47 @@
 <h1 class = "logo"><img src = "images/favicon.png"></img></h1>
-
+<button class = "menu-trigger" aria-controls="main-nav" aria-expanded = "false" id = "js-menu-trigger">
+  Menu <span class="menu-trigger__icon" id="js-menu-trigger__icon" aria-hidden="true">+</span>
+</button>
 <nav class = "main-nav">
-    <ul class = "main-nav__list clearfix">
-      <li class = "main-nav__item"><a href="#">Home</a></li>
-      <li class = "main-nav__item"><a href="#">Our team</a></li>
+    <ul class = "main-nav__list">
+      <li class = "main-nav__item"><a href="#">Articles</a></li>
       <li class = "main-nav__item"><a href="#">Projects</a></li>
       <li class = "main-nav__item"><a href="#">Contact</a></li>
     </ul>
 </nav>
+<script>
+  (function(){
+      var menu_trigger = document.getElementById('js-menu-trigger'),
+      icon         = document.getElementById('js-menu-trigger__icon'),
+      body         = document.getElementsByTagName("body")[0],
+      open         = false;
+
+      menu_trigger.addEventListener('click', toggleMenu, false);
+
+      function toggleMenu(e) {
+          if(!open) {
+              open = true;
+              body.classList.add('open');
+              this.classList.add('active');
+              this.setAttribute('aria-expanded', 'true');
+              icon.innerHTML = "×";
+          }
+          else {
+              body.classList.remove('open');
+              this.classList.remove('active');
+              this.setAttribute('aria-expanded', 'false');
+              icon.innerHTML = "+";
+              open = false;
+          }
+      }
+  })();</script>
+
+  <script>
+    if('querySelector' in document
+       && 'localStorage' in window
+       && 'addEventListener' in window) {
+
+        var root = document.getElementsByTagName( 'html' )[0];
+    root.classList.add('enhanced');
+}
+</script>
