@@ -1,0 +1,7 @@
+{{ range .Site.Menus.main }}
+<a
+  class="nav-link {{if eq .Identifier "home" }}active{{end}}" 
+  href="{{ if hasPrefix .URL "//"}} {{ .URL }} {{ else }} //www.karankhanchandani.com{{ .URL | relURL }} {{ end }}">
+    {{ .Name }}
+</a>
+{{ end }}
