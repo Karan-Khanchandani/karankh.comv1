@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|PT+Mono');
+
+body{
+    font-family: $font-family-sans;
+    color: $dark-gray;
+    font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-weight: bold;
+}
+
+button,
+input,
+textarea,
+select{
+    font-family: $font-family-mono;
+    font-weight: inherit;
+}
+
+strong,
+b{
+    font-weight: bold;
+}
+
+a{
+    color: $blue;
+}
