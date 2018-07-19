@@ -1,3 +1,4 @@
+<ul  class="nav-group">
 {{ range .Site.Menus.main }}
 <!-- <a
   class="nav-link {{if eq .Identifier "home" }}active{{end}}" 
@@ -5,9 +6,10 @@
     {{ .Name }}
 </a> -->
 
-<a
-  class="nav-link {{if eq .Identifier "home" }}active{{end}}" 
+<li class="nav-link {{if eq .Identifier "blog" }}active{{end}}"><a
   href="{{ if hasPrefix .URL "//"}} {{ .URL }} {{ else }} //localhost:1313{{ .URL | relURL }} {{ end }}">
     {{ .Name }}
-</a>
+</a></li>
+
 {{ end }}
+</ul>

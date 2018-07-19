@@ -1,47 +1,9 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
   {{ $baseurl := .Site.BaseURL }}
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ .Title }} | {{ .Site.Title }}</title>
-  {{ if (getenv "CSS_VERSION") }}
-    <link rel="stylesheet" href="{{ "/css/" | relURL }}main-{{ getenv "CSS_VERSION" }}.css" />
-  {{ else }}
-    <link rel="stylesheet" href="{{ "/css/main.css" | relURL }}" />
-  {{ end }}
-  <!-- Start of Open Graph -->
-    <meta property="og:title" content="{{ .Title }}">
-    {{ if .IsPage }}
-    <meta property="og:type" content="article">
-    <meta property="article:published_time" content="{{ .Date.Format "2006-01-02" }}">
-    {{ else }}
-    <meta property="og:type" content="website">
-    {{ end }}
-    <meta property="og:description" content="{{ .Description }}">
-    <meta property="og:url" content="{{ .Permalink }}">
-    <meta property="og:site_name" content="{{ .Site.Title }}">
-    {{ if .Params.image }}
-    <meta property="og:image" content="{{ .Params.image | absURL }}">
-    {{ end }}
-    {{ range .Params.tags }}
-    <meta property="og:tags" content="{{ . }}">
-    {{ end }}
-  <!-- End of Open Graph -->
-  <!-- Todo Other share options -->
-  {{ if .Site.GoogleAnalytics }}
-    <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    ga('create', '{{ .Site.GoogleAnalytics }}', 'auto');
-    ga('send', 'pageview');
-    </script>
-  {{ end }}
-</head>
-
+{{ partial "head" .}}
 <body>
+    
   <header class="page-header">
     <div class="header-container">
       <div class="nav-wrapper">
@@ -55,9 +17,9 @@
             <div class="nav">
               <div class="nav-inner">
                 <button class="menu-toggle-btn menu-hide-btn" onclick="toggleMenu(false)"></button>
-                <div class="nav-group">
+                <nav>
                   {{ partial "menu.html" . }}
-                </div>
+                </nav>
                 <!-- <div class="nav-group">
                   <a href="//www.skycoin.net{{ "/buy/" | relLangURL }}" class="nav-button">BUY SKYCOIN</a>
                 </div> -->
