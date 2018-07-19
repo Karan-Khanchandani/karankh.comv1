@@ -81,7 +81,7 @@ pygmentsStyle = "murphy"
 [[params.social]]
   name = "Github"
   url = "https://www.facebook.com/SkycoinOfficial/"
-  image = "images/facebook.svg"
+  image = "images/github.svg"
 [[params.social]]
   name = "Codepen"
   url = "https://www.instagram.com/skycoinproject/"
@@ -93,7 +93,7 @@ pygmentsStyle = "murphy"
 [[params.social]]
   name = "SPOJ"
   url = "https://www.youtube.com/c/Skycoin"
-  image = "images/spoj.jpg"
+  image = "images/spoj.png"
 [[params.social]]
   name = "Codeforces"
   url = "https://www.reddit.com/r/SkycoinProject"
@@ -101,7 +101,7 @@ pygmentsStyle = "murphy"
 [[params.social]]
   name = "Codechef"
   url = "https://itunes.apple.com/nl/podcast/skycoin/id1348472259?l=en"
-  image = "images/codechef.jpg"  
+  image = "images/codechef.png"  
 [[params.social]]
   name = "Hackerearth"
   url = "https://discord.gg/EgBenrW"
