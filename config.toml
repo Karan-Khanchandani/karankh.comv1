@@ -1,4 +1,5 @@
-baseURL = "https://www.karankhanchandani.com"
+#baseURL = "https://www.karankhanchandani.com"
+baseURL = "/"
 languageCode = "en-us"
 title = "Karan Khanchandani"
 defaultContentLanguage = "en"
@@ -27,7 +28,7 @@ pygmentsStyle = "murphy"
 [[menu.main]]
     name = "Home"
     identifier = "home"
-    url = "/home/"
+    url = "/"
     weight = 1
 [[menu.main]]
     name = "Blog"
@@ -70,42 +71,46 @@ pygmentsStyle = "murphy"
   twitterAnalytics = "ny03t"
 
 [[params.social]]
+  name = "LinkedIn"
+  url = "https://www.linkedin.com/in/karan-khanchandani-47a22569/"
+  image = "images/linkedin.svg"
+[[params.social]]
   name = "Medium"
-  url = "https://medium.com/@Skycoinproject"
+  url = "https://twitter.com/skycoinproject"
   image = "images/medium.svg"
 [[params.social]]
-  name = "Twitter"
-  url = "https://twitter.com/skycoinproject"
-  image = "images/twitter.svg"
-[[params.social]]
-  name = "Facebook"
+  name = "Github"
   url = "https://www.facebook.com/SkycoinOfficial/"
   image = "images/facebook.svg"
 [[params.social]]
-  name = "Instagram"
+  name = "Codepen"
   url = "https://www.instagram.com/skycoinproject/"
-  image = "images/instagram.svg"
+  image = "images/codepen.svg"
 [[params.social]]
-  name = "Github"
+  name = "Hackerrank"
   url = "https://github.com/skycoin/skycoin"
-  image = "images/github.svg"
+  image = "images/hackerrank.png"
 [[params.social]]
-  name = "Youtube"
+  name = "SPOJ"
   url = "https://www.youtube.com/c/Skycoin"
-  image = "images/youtube.svg"
+  image = "images/spoj.jpg"
 [[params.social]]
-  name = "Reddit"
+  name = "Codeforces"
   url = "https://www.reddit.com/r/SkycoinProject"
-  image = "images/reddit.svg"
+  image = "images/codeforces.png"
 [[params.social]]
-  name = "Apple"
+  name = "Codechef"
   url = "https://itunes.apple.com/nl/podcast/skycoin/id1348472259?l=en"
-  image = "images/apple.svg"  
+  image = "images/codechef.jpg"  
 [[params.social]]
-  name = "Discord"
+  name = "Hackerearth"
   url = "https://discord.gg/EgBenrW"
-  image = "images/discord.svg" 
+  image = "images/hackerearth.png" 
 [[params.social]]
-  name = "Telegram"
+  name = "Facebook"
   url = "https://t.me/Skycoin"
-  image = "images/telegram.svg"    
+  image = "images/facebook.svg" 
+  [[params.social]]
+  name = "Instagram"
+  url = "https://t.me/Skycoin"
+  image = "images/instagram.svg"   
