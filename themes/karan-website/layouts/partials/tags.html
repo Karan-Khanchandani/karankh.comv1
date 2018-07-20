@@ -1,8 +1,15 @@
 <section class="tags">
         <h1 class="tags__title">TAGS</h1>
         <div class="tags__list">
-          {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+          <!-- {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
             <a class="tags__item" href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}">{{ $name }}</a>
+          {{ end }} -->
+          {{ range $i := (slice "categories" "tags") }}
+            {{ with ($.Param $i) }}
+                {{ range $k := . }}
+                  <a class="meta__link" href="{{ relLangURL (print "/" $i "/" $k | urlize) }}">{{$k}}</a>
+                {{ end }}
+            {{ end }}
           {{ end }}
         </div>
 </section>

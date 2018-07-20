@@ -1,6 +1,7 @@
 ---
 title: "React Router Tutorial Part 1"
 date: 2018-07-19T10:52:37+05:30
+tags: ["part1", "part3"]
 ---
 
 ## Summary:

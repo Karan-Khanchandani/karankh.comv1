@@ -2,22 +2,17 @@
 
 <main class="list">
     {{ if .Title }}
-      {{ if ne .Title .Site.Title }}
-      <a class="back_link" href="{{ "/" | relLangURL }}">
-        <img src="{{ "images/icArrow_2x.png" | absURL }}" /> Back
-      </a>
-      {{ end }}
       <h1 class="list__title">{{ .Title }}</h1>
     {{ end }}  
     <div class="list__container">
       <section class="list__posts">
-        {{ $paginator := .Paginate (where .Data.Pages  "Section" "!=" "") 6 }}
+        {{ $paginator := .Paginate (where .Data.Pages  "Section" "!=" "") 7 }}
         <ul class="list__list">
           {{ range $paginator.Pages }}      
             <li class="list__item">
-              <a class="list__link" href="{{ .URL | relLangURL }}">
+              
                 <div class="list__item-inner">
-                  {{ if .Params.image }}
+                  <!-- {{ if .Params.image }}
                     <div class="list__item-image">
                         <div style="background-image: url({{ .Params.image.url | absURL }})" class="list__image"></div>
                     </div>
@@ -25,17 +20,18 @@
                     <div class="list__item-image">
                       <img src="{{ "img/placeholder.svg" | relURL }}" class="list__image list__image-placeholder">
                     </div>
-                  {{ end }}
-                  <span class="list__meta">{{ .Date.Format "Jan 2 2006" }}</span>
-                  <span class="list__title">{{ .Title }}</span>
+                  {{ end }} -->
+                  <h2 class="list__meta">{{ .Date.Format "Jan 2,2006" }}</h2>
+                  <a class="list__link" href="{{ .URL | relLangURL }}">
+                  <h2 class="list__title">{{ .Title }}</h2>
+                 </a>
                 </div>
-              </a>
+              
             </li>
           {{ end }}
         </ul>
         {{ partial "pagination.html" . }}
       </section>
-      {{ partial "tags.html" . }}
     </div>
   </main>
 
