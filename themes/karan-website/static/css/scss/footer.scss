@@ -1,0 +1,130 @@
+.footer{
+    padding: 1rem;
+    background-color: $dark;
+    color: #fff;
+    &__container{
+        @include container($container-width-base, true);       
+    }
+
+    
+    &__menu {
+        clear: both;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-top: 40px;
+        padding-bottom: 24px;
+    
+        @include tablet {
+          padding-bottom: 80px;
+          padding-top: 80px;
+        }
+
+       
+        @media (min-width: 52rem){
+           .availability{
+            float: left;
+            width: 50%;
+           }
+
+        }
+        .footer-links {
+          text-align: left;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          width: 100%;
+          margin-top: 24px;
+          flex-direction: column;
+
+          a{
+             margin-top: 0.5rem;
+             color: #fff;
+          }
+
+          
+
+          @media  (min-width: 52rem) {
+            float: right;
+            width: 50%;
+            margin-top: 0;
+          }
+          
+        }
+      }
+
+    &__social {
+    border-top: 1px solid rgba(255, 255, 255, .12);
+    border-bottom: 1px solid rgba(255, 255, 255, .12);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    a{
+        margin: 0.5rem;
+        align-self: center;
+    }
+  }
+
+  &__copyright {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: #616d7c;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    @include tablet {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+
+    & > * {
+      line-height: 1.5rem;
+      @media (max-width: $breakpoint-sm) {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    a {
+      font-size: 13px;
+      color: #616d7c;
+    }
+
+    .copy,
+    .contact,
+    .languages {
+      width: 100%;
+      text-align: center;
+      @include tablet {
+       width: 33.3333%;
+      }
+    }
+
+    .copy {
+      @include tablet {
+        text-align: left;
+      }
+    }
+
+  }
+
+}
+
+.footer__aboutme{
+    overflow: auto;
+}
+
+.footer_logo{
+    float:left;
+    margin-bottom: 1rem;
+    max-width: 100%;
+
+}
+
+.footer__aboutme + p{
+    float: right;
+    }
