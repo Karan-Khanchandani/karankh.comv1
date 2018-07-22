@@ -2,6 +2,8 @@
 title: "React Router Tutorial Part 1"
 date: 2018-07-19T10:52:37+05:30
 tags: ["part1", "part3"]
+markup: "mmark"
+
 ---
 
 ## Summary:
@@ -119,6 +121,7 @@ The implementation is completely in golang, so no buffer overflows.
 - If the server is online, it will receive the message instantly and will see response
 
 This is a very powerful messaging primitive. Especially when you have mobile devices or an unreliable network that is going on and off. This type of network can deliver messages, even over latencies of minutes, hours or months. It is
+{.main}
 - Source independent
 - Synchronous
 - Scale invariance in time
@@ -151,9 +154,23 @@ The long term goal of Aether is to create content and website that are internal 
 - you will put in a public key, then slashes, to navigate to content example: ipfs://QmYwAPJzv5CZsnA625s3Xf2nemtYgPpHdWEz79ojWnPbdG/readme
 - then it will find peers and fetch the content
 
-## Roadmap:
+##### Aether will look exactly like IPFS
+- there will be a content browser
+- you will put in a public key, then slashes, to navigate to content example: ipfs://QmYwAPJzv5CZsnA625s3Xf2nemtYgPpHdWEz79ojWnPbdG/readme
+- then it will find peers and fetch the content
 
+## Roadmap:
+{.temp}
 Our application stack is
 Skycoin + Skywire (Meshnet) + Aether (Skyhash) + CX (application language)
 
 We almost have the coin completed. Then Skywire and Aether in development/demo state.
+
+{.main}
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
+<p class="myclass">This paragraph has a class "myclass"</p>

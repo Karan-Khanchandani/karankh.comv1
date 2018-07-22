@@ -1,6 +1,7 @@
 {{ partial "header.html" . }}
 
-<main class="list">
+<main class = "main-content">
+<div class="list">
     {{ if .Title }}
       <h1 class="list__title">{{ .Title }}</h1>
     {{ end }}  
@@ -33,6 +34,6 @@
         {{ partial "pagination.html" . }}
       </section>
     </div>
-  </main>
-
+  </div>
+</main>
   {{ partial "footer.html" . }}

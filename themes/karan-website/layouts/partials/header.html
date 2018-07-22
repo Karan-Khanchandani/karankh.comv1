@@ -4,7 +4,7 @@
 {{ partial "head" .}}
 <body>
     
-  <header class="page-header">
+  <!-- <header class="page-header">
     <div class="header-container">
       <div class="nav-wrapper">
         <div class="header-inner">
@@ -20,10 +20,6 @@
                 <nav>
                   {{ partial "menu.html" . }}
                 </nav>
-                <!-- <div class="nav-group">
-                  <a href="//www.skycoin.net{{ "/buy/" | relLangURL }}" class="nav-button">BUY SKYCOIN</a>
-                </div> -->
-                <!-- Todo Search Website option -->
               </div>
             </div>
           </div>
@@ -44,4 +40,34 @@
         }
       }
     </script>
+  </header> -->
+
+  <header class = "page-header">
+    <h1 class = "logo">
+      <a href="//www.karankhanchandani.com/" class="logo">
+        <img src="{{ "/images/favicon.png" | relURL }}" alt="Karan Khanchandani">
+      </a>
+    </h1>
+    <button class="menu-toggle-btn menu-show-btn" onclick="toggleMenu(true)"></button>
+    <nav class ="header__nav">
+        <button class="menu-toggle-btn menu-hide-btn" onclick="toggleMenu(false)"></button>
+      {{ partial "menu.html" . }}
+    </nav>
+
+      <script type="text/javascript">
+      function toggleMenu(menuVisible)
+      {
+        if (menuVisible) {
+          $('.menu-show-btn').hide();
+          $('.header__nav').addClass('visible');
+          $('body').css('overflow', 'hidden');
+        } else {
+          $('.menu-show-btn').show();
+          $('.header__nav').removeClass('visible');
+          $('body').css('overflow', 'auto');
+        }
+      }
+    </script>
+    
   </header>
+  </body>
