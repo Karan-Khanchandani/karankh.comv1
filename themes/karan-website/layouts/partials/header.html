@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
   {{ $baseurl := .Site.BaseURL }}
-{{ partial "head" .}}
-<body>
-  <header class = "page-header">
-    <h1 class = "logo">
-      <a href="//www.karankhanchandani.com/" class="logo">
-        <img src="{{ "/images/favicon.png" | relURL }}" alt="Karan Khanchandani">
+      <a class = "logo" href="//www.karankhanchandani.com/">
+        <img id = "logo_img" src="{{ "/images/favicon.png" | relURL }}" alt="Karan Khanchandani">
       </a>
-    </h1>
     <nav class ="header__nav">
+      <button class="menu-trigger" aria-controls="main-nav" aria-expanded="false" id="js-menu-trigger" aria-label="Site Menu">
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 512 512" width="100%" height="100%">
+            <path fill="#000" d="M491.318 235.318h-470.636c-11.422 0-20.682 9.259-20.682 20.682s9.26 20.682 20.682 20.682h470.636c11.423 0 20.682-9.259 20.682-20.682 0-11.422-9.259-20.682-20.682-20.682zM491.318 78.439h-470.636c-11.422 0-20.682 9.26-20.682 20.682 0 11.422 9.26 20.682 20.682 20.682h470.636c11.423 0 20.682-9.26 20.682-20.682 0-11.422-9.259-20.682-20.682-20.682zM491.318 392.197h-470.636c-11.422 0-20.682 9.259-20.682 20.682s9.26 20.682 20.682 20.682h470.636c11.423 0 20.682-9.259 20.682-20.682s-9.259-20.682-20.682-20.682z"></path></svg>
+    </button>
       {{ partial "menu.html" . }}
     </nav>
 
@@ -27,6 +26,3 @@
         }
       }
     </script>
-    
-  </header>
-  </body>
