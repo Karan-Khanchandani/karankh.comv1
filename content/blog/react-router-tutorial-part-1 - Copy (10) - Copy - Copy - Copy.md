@@ -1,6 +1,8 @@
 ---
 title: "React Router Tutorial Part 1"
-date: 2018-07-19T10:52:37+05:30
+date: 2018-07-25T10:52:37+05:30
+tags: ["react", "nodejs"]
+categories: ["software development", "frontend development"]
 ---
 
 ## Summary:
