@@ -1,34 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|PT+Mono");
-body {
-  font-size: calc(14px + .2vw);
-  position: relative;
-  overflow-x: hidden;
-  margin: 0 auto; }
-
-@media all and (min-width: 52rem) {
-  @supports (display: grid) {
-    body {
-      display: grid;
-      grid-template-columns: repeat(12, 1fr); }
-    .page-header {
-      grid-row: 1;
-      grid-column: 2/12;
-      display: grid;
-      grid-template-columns: repeat(12, 1fr); }
-    .main-content {
-      grid-row: 2;
-      grid-column: 2/12;
-      display: grid; }
-    .footer {
-      grid-column: 1/13;
-      display: grid;
-      grid-row: 3; } } }
-
-@media all and (max-width: 52rem) {
-  .main-content,
-  .footer {
-    padding: 2rem; } }
-
 img {
   max-width: 100%; }
 
@@ -101,6 +71,10 @@ a {
 
 header {
   padding-top: 1rem; }
+  @media (min-width: 52rem) {
+    header {
+      display: grid;
+      grid-template-columns: repeat(1fr, 12); } }
   header .logo {
     margin: 0; }
     header .logo #logo_img {

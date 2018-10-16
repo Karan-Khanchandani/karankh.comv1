@@ -2,6 +2,11 @@
 header{
   padding-top: 1rem;
 
+  @media(min-width: $breakpoint-md){
+  display: grid;
+  grid-template-columns: repeat(1fr, 12);
+  }
+
   .logo{
     margin: 0;
     #logo_img {
