@@ -4,7 +4,7 @@
       <a class = "logo" href="//www.karankhanchandani.com/">
         <img id = "logo_img" src="{{ "/images/favicon.png" | relURL }}" alt="Karan Khanchandani">
       </a>
-    <nav class ="header__nav">
+    <nav class ="header__nav" id = "header__nav">
       <button class="menu-trigger" aria-controls="main-nav" aria-expanded="false" id="js-menu-trigger" aria-label="Site Menu">
         <svg aria-hidden="true" focusable="false" viewBox="0 0 512 512" width="100%" height="100%">
             <path fill="#000" d="M491.318 235.318h-470.636c-11.422 0-20.682 9.259-20.682 20.682s9.26 20.682 20.682 20.682h470.636c11.423 0 20.682-9.259 20.682-20.682 0-11.422-9.259-20.682-20.682-20.682zM491.318 78.439h-470.636c-11.422 0-20.682 9.26-20.682 20.682 0 11.422 9.26 20.682 20.682 20.682h470.636c11.423 0 20.682-9.26 20.682-20.682 0-11.422-9.259-20.682-20.682-20.682zM491.318 392.197h-470.636c-11.422 0-20.682 9.259-20.682 20.682s9.26 20.682 20.682 20.682h470.636c11.423 0 20.682-9.259 20.682-20.682s-9.259-20.682-20.682-20.682z"></path></svg>
@@ -13,16 +13,30 @@
     </nav>
 
       <script type="text/javascript">
-      function toggleMenu(menuVisible)
-      {
-        if (menuVisible) {
-          $('.menu-show-btn').hide();
-          $('.header__nav').addClass('visible');
-          $('body').css('overflow', 'hidden');
-        } else {
-          $('.menu-show-btn').show();
-          $('.header__nav').removeClass('visible');
-          $('body').css('overflow', 'auto');
-        }
-      }
+          (function(){
+          var menu_trigger = document.getElementById('js-menu-trigger'),
+          icon         = document.getElementById('js-menu-trigger__icon'),
+          body         = document.getElementsByTagName("body")[0],
+          nav          = document.getElementById('nav-group'),
+          open         = false;
+
+          menu_trigger.addEventListener('click', toggleMenu, false);
+
+          function toggleMenu(e) {
+              if(!open) {
+                  open = true;
+                  body.classList.add('open');
+                  this.classList.add('active');
+                  this.setAttribute('aria-expanded', 'true');
+                  nav.style.display = "block";
+              }
+              else {
+                  body.classList.remove('open');
+                  this.classList.remove('active');
+                  this.setAttribute('aria-expanded', 'false');
+                  nav.style.display = "none";
+                  open = false;
+              }
+          }
+      })();
     </script>

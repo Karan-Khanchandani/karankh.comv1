@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|PT+Mono");
+
+body {
+  transition: transform .25s ease-out; }
+
+
 img {
   max-width: 100%; }
 
@@ -74,33 +79,48 @@ header {
   @media (min-width: 52rem) {
     header {
       display: grid;
-      grid-template-columns: repeat(1fr, 12); } }
+      grid-template-columns: repeat(1fr, 12);
+    }
+
+    header .header__nav .nav-group {
+      display: flex;
+      align-items: flex-end;
+      align-content: space-between;
+      float: right; 
+    }
+
+    header .header__nav {
+      grid-column: 3/13; 
+    }
+    
+    .menu-trigger{
+      display: none;
+    }
+  }
   header .logo {
     margin: 0; }
     header .logo #logo_img {
-      max-width: 150px; }
-  header .header__nav {
-    grid-column: 3/13; }
+      max-width: 80px; }
+ 
     header .header__nav .nav-group {
-      margin: 0; }
+      margin: 0;
+      padding: 0;
+    }
       header .header__nav .nav-group .nav-link {
+        transition: background-color 0.1s ease-in;
         padding: 1rem; }
         header .header__nav .nav-group .nav-link a {
+          transition: color 0.1s ease-in;
           text-decoration: none;
           color: black; }
       header .header__nav .nav-group .nav-link:hover {
         background-color: #101F34; }
         header .header__nav .nav-group .nav-link:hover a {
           color: aliceblue; }
-      @media (min-width: 52rem) {
-        header .header__nav .nav-group {
-          display: flex;
-          align-items: flex-end;
-          align-content: space-between;
-          float: right; } }
 
-.menu-trigger {
-  top: -50px;
+  .menu-trigger {
+  top: 30px;
+  position: absolute;
   width: 60px;
   height: 60px;
   right: 1em;
@@ -117,13 +137,28 @@ header {
   letter-spacing: 1.5px; }
 
 @media all and (max-width: 1024px) {
-  .enhanced .menu-trigger {
+  .menu-trigger {
     display: block;
     position: absolute;
     z-index: 10;
     top: 1.5em;
     right: 1em;
-    padding: .5em 1em; } }
+    padding: .5em 1em; }
+
+    body.open {
+      transform: translateY(350px);
+  }
+  
+  .header__nav .nav-group {
+      position: fixed;
+      margin: 0;
+      z-index: 9;
+      padding: 2em;
+      top: -350px;
+      left: 0;
+      width: 100%;
+   }
+  }
 
 .enhanced .menu-trigger:hover {
   border: none;
