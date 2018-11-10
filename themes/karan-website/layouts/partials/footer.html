@@ -1,26 +1,24 @@
 <footer class="footer">
     <div class="footer__container">
       <div class = "footer__aboutinfo">
-            <div class = "footer__aboutme">
-                <img class="footer_logo" alt="Karan Khanchandani" src="{{ "/images/karan_side.png" | relURL }}" />
-                <p>Hi I’m Karan - a full stack developer from Bangalore. I’m currently working at SAP. I also do some freelancing in my spare time. I have a significant experience in designing user interfaces, with strong focus on responsive design, accessibility and performance using latest front-end design techniques.</p>
-              </div>
+        <img class="footer_logo" alt="Karan Khanchandani" src="{{ "/images/karan_side.png" | relURL }}" />
       </div>
-      <div class="footer__menu">
-          <div class="availability">
-              <h2>Availability</h2>
-              <p>I’m currently available for a regular full time / part time job or development projects. You can contact me for the same. You can look into my technical expertise in this domain.</p>
-         </div>
-        <div class="footer-links">
-          <h2>Links on this site</h2>
-            {{ range .Site.Menus.main }}
-            <a
-              href="{{ if hasPrefix .URL "//"}} {{ .URL }} {{ else }} //localhost:1313{{ .URL | relURL }} {{ end }}">
-                {{ .Name }}
-            </a>
-            {{ end }}
-        </div>
+      <div class = "footer__aboutme">   
+        <p>Hi I’m Karan - a full stack developer from Bangalore. I’m currently working at SAP. I also do some freelancing in my spare time. I have a significant experience in designing user interfaces, with strong focus on responsive design, accessibility and performance using latest front-end design techniques.</p>
       </div>
+      <div class="availability">
+          <h2>Availability</h2>
+          <p>I’m currently available for a regular full time / part time job or development projects. You can contact me for the same. You can look into my technical expertise in this domain.</p>
+      </div>
+    <div class="footer-links">
+      <h2>Links on this site</h2>
+        {{ range .Site.Menus.main }}
+        <a
+          href="{{ if hasPrefix .URL "//"}} {{ .URL }} {{ else }} //localhost:1313{{ .URL | relURL }} {{ end }}">
+            {{ .Name }}
+        </a>
+        {{ end }}
+    </div>
       <div class="footer__social">
         {{ range .Site.Params.social}}
           <a href="{{ .url | absURL }}" target="blank">

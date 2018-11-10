@@ -174,15 +174,48 @@ header {
 
 .footer {
   padding: 1rem;
+  margin: 0;
   background-color: #101F34;
   color: #fff; }
   .footer__container {
     margin-left: auto;
     margin-right: auto;
-    max-width: 70rem;
-    max-width: 74rem;
+    max-width: 100rem;
     padding-left: 2rem;
     padding-right: 2rem; }
+
+    @media (min-width: 52rem) {
+      .footer__container {
+        display : grid;
+        grid-template-areas: "footer_pic desc"
+                              "availability links"
+                              "social social"
+                              "contact contact"
+      }
+      .footer__aboutinfo{
+        grid-area: footer_pic;
+      }
+
+      .footer__aboutme{
+        grid-area: desc;
+      }
+
+      .availability{
+        grid-area: availability;
+      }
+
+      .footer-links{
+        grid-area: links;
+      }
+
+      .footer__social{
+        grid-area: social;
+      }
+
+      .footer__copyright{
+        grid-area: contact;
+      }
+     }
   .footer__menu {
     clear: both;
     display: flex;
@@ -196,10 +229,10 @@ header {
         padding-bottom: 80px;
         padding-top: 80px; } }
     @media (min-width: 52rem) {
-      .footer__menu .availability {
+       .availability {
         float: left;
         width: 50%; } }
-    .footer__menu .footer-links {
+     .footer-links {
       text-align: left;
       display: flex;
       flex-wrap: wrap;
@@ -207,11 +240,11 @@ header {
       width: 100%;
       margin-top: 24px;
       flex-direction: column; }
-      .footer__menu .footer-links a {
+       .footer-links a {
         margin-top: 0.5rem;
         color: #fff; }
       @media (min-width: 52rem) {
-        .footer__menu .footer-links {
+         .footer-links {
           float: right;
           width: 50%;
           margin-top: 0; } }
@@ -264,7 +297,6 @@ header {
   overflow: auto; }
 
 .footer_logo {
-  float: left;
   margin-bottom: 1rem;
   max-width: 100%; }
 
