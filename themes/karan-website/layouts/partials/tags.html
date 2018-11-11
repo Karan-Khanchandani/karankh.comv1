@@ -4,7 +4,9 @@
           {{ range $i := (slice "tags") }}
             {{ with ($.Param $i) }}
                 {{ range $k := . }}
+                <li class = "tags_list_li">
                   <a class="meta__link" href="{{ relLangURL (print "/" $i "/" $k | urlize) }}">{{$k}}</a>
+                  </li>
                 {{ end }}
             {{ end }}
           {{ end }}
@@ -17,7 +19,9 @@
           {{ range $i := (slice "categories") }}
             {{ with ($.Param $i) }}
                 {{ range $k := . }}
+                <li class = "tags_list_li">
                   <a class="meta__link" href="{{ relLangURL (print "/" $i "/" $k | urlize) }}">{{$k}}</a>
+                </li>
                 {{ end }}
             {{ end }}
           {{ end }}

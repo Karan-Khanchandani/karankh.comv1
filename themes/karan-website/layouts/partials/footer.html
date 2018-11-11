@@ -12,12 +12,14 @@
       </div>
     <div class="footer-links">
       <h2>Links on this site</h2>
+      <div class = "footer-links-list">
         {{ range .Site.Menus.main }}
-        <a
+        <li><a
           href="{{ if hasPrefix .URL "//"}} {{ .URL }} {{ else }} //localhost:1313{{ .URL | relURL }} {{ end }}">
             {{ .Name }}
-        </a>
+        </a></li>
         {{ end }}
+      </div>
     </div>
       <div class="footer__social">
         {{ range .Site.Params.social}}

@@ -196,13 +196,33 @@ header {
 
 .footer {
   padding: 1rem;
-  margin: 0;
+  margin-top: 3rem;
   background-color: #101F34;
   color: #fff; }
   .footer__container {
     max-width: 100rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
+ }
+ 
+ .footer-links-list{
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-links-list li{
+  display: inline-block;
+  padding: 1rem;
+}
+
+.footer-links-list li a{
+  text-decoration: none;
+  transition: color 0.1s ease-in;
+}
+
+.footer-links li:hover {
+  color: #101F34;
+  background-color: #fff;
  }
 
     @media (min-width: 52rem) {
@@ -242,6 +262,17 @@ header {
       .footer__copyright{
         grid-area: contact;
       }
+
+
+
+        .footer-links-list{
+          flex-direction: row;
+          justify-content: space-between;
+        }
+        
+        .footer-links h2{
+        text-align: center;
+      }
      }
   .footer__menu {
     clear: both;
@@ -255,26 +286,10 @@ header {
       .footer__menu {
         padding-bottom: 80px;
         padding-top: 80px; } }
-    @media (min-width: 52rem) {
-       .availability {
-        float: left;
-        width: 50%; } }
-     .footer-links {
-      text-align: left;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      width: 100%;
-      margin-top: 24px;
-      flex-direction: column; }
+
        .footer-links a {
         margin-top: 0.5rem;
-        color: #fff; }
-      @media (min-width: 52rem) {
-         .footer-links {
-          float: right;
-          width: 50%;
-          margin-top: 0; } }
+        color:inherit; }
   .footer__social {
     border-top: 1px solid rgba(255, 255, 255, 0.12);
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);
@@ -330,6 +345,19 @@ header {
 .footer__aboutme + p {
   float: right; }
 
+
+.tags_list_li{
+  display: inline-block;
+  padding: 1rem;
+  margin: 0.5rem 0.5rem;
+  color: #fff;
+  background-color: #101F34;
+  border-radius: 10px;
+}
+.tags_list_li a{
+  text-decoration: none;
+  color: inherit;
+}
 .pagination {
   margin-left: auto;
   margin-right: auto;
