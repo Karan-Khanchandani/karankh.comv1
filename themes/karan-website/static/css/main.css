@@ -76,11 +76,13 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: 'Nunito', sans-serif;
   font-weight: bold; }
 
-h1{
-  font-size: 4rem;
-  font-family: 'Nunito', sans-serif;
+
+.post__title{
+  font-size: calc(1rem + 3vw);
+  
 }
 
 button,
@@ -135,13 +137,23 @@ header {
       margin: 0;
       padding: 0;
     }
+
+    .nav-link a::after {
+      content: ".";
+      color: #cb5d9d;
+  }
       header .header__nav .nav-group .nav-link {
         transition: background-color 0.1s ease-in;
         padding: 1rem; }
         header .header__nav .nav-group .nav-link a {
           transition: color 0.1s ease-in;
           text-decoration: none;
-          color: black; }
+          text-transform: capitalize;
+          font-size: 1.25rem;
+          font-weight: 500;
+          color: inherit;
+          font-family: 'Nunito', sans-serif;
+       }
       header .header__nav .nav-group .nav-link:hover {
         background-color: #101F34; }
         header .header__nav .nav-group .nav-link:hover a {
@@ -174,7 +186,7 @@ header {
     padding: .5em 1em; }
 
     body.open {
-      transform: translateY(350px);
+      transform: translateY(450px);
   }
   
   .header__nav .nav-group {
@@ -182,7 +194,7 @@ header {
       margin: 0;
       z-index: 9;
       padding: 2em;
-      top: -350px;
+      top: -450px;
       left: 0;
       width: 100%;
    }
@@ -203,8 +215,7 @@ header {
 .footer {
   padding: 1rem;
   margin-top: 3rem;
-  background-color: #101F34;
-  color: #fff; }
+  background-color: #fafafa; }
   .footer__container {
     max-width: 100rem;
     margin-top: 2rem;
