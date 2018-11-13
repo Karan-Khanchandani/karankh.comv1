@@ -7,7 +7,7 @@
 <main class = "main-content">
 <div class="list">
     {{ if .Title }}
-      <h1 class="list__title">{{ .Title }}</h1>
+      <h1 class="list__title">The {{ .Title }}</h1>
     {{ end }}  
     <div class="list__container">
       <section class="list__posts">
@@ -17,18 +17,9 @@
             <li class="list__item">
               
                 <div class="list__item-inner">
-                  <!-- {{ if .Params.image }}
-                    <div class="list__item-image">
-                        <div style="background-image: url({{ .Params.image.url | absURL }})" class="list__image"></div>
-                    </div>
-                  {{ else }}
-                    <div class="list__item-image">
-                      <img src="{{ "img/placeholder.svg" | relURL }}" class="list__image list__image-placeholder">
-                    </div>
-                  {{ end }} -->
-                  <h2 class="list__meta">{{ .Date.Format "Jan 2,2006" }}</h2>
+                  <h2 class="list__meta">{{ .Date.Format "January 2, 2006" }}</h2>
                   <a class="list__link" href="{{ .URL | relLangURL }}">
-                  <h2 class="list__title">{{ .Title }}</h2>
+                  <h2>{{ .Title }}</h2>
                  </a>
                 </div>
               
