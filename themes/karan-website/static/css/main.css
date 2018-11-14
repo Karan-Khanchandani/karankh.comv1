@@ -1,10 +1,30 @@
 @import url('https://fonts.googleapis.com/css?family=Merriweather|Nunito:800');
 
+
+@import url('https://use.fontawesome.com/releases/v5.5.0/css/all.css');
+
+
 body {
   transition: transform .25s ease-out;
   margin : 1rem !important;
 }
 
+*::selection{
+  background-color: #ffe200;
+}
+
+.fab{
+  font-size: calc(2.5rem + 2.5vw);
+  color: black;
+}
+
+.fab a:hover i{
+  color: yellow;
+}
+
+.fab a:hover i{
+  color: yellow;
+}
 
 @media (min-width: 52rem) {
   .main-content{
@@ -170,10 +190,10 @@ header {
           color: inherit;
           font-family: 'Nunito', sans-serif;
        }
-      header .header__nav .nav-group .nav-link:hover {
+    /*  header .header__nav .nav-group .nav-link:hover {
         background-color: #101F34; }
         header .header__nav .nav-group .nav-link:hover a {
-          color: aliceblue; }
+          color: aliceblue; }*/
 
   .menu-trigger {
   top: 30px;
@@ -268,12 +288,13 @@ header {
         display : grid;
 
         grid-template-areas: "footer_pic desc"
-                              "availability links"
+                              "footer_pic availability"
                               "social social"
                               "contact contact"
       }
       .footer__aboutinfo{
         grid-area: footer_pic;
+        margin-right: 3rem;
       }
 
       .footer__aboutme{
@@ -326,10 +347,15 @@ header {
   .footer__social {
     border-top: 1px solid rgba(255, 255, 255, 0.12);
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around; }
-    .footer__social a {
+    }
+
+    .footer__social__inner{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; 
+    }
+
+    .footer__social__inner a {
       margin: 0.5rem;
       align-self: center; }
   .footer__copyright {
@@ -373,7 +399,15 @@ header {
 
 .footer_logo {
   margin-bottom: 1rem;
-  max-width: 100%; }
+  max-width: 100%;
+ 
+}
+
+@media(min-width: 52rem){
+  .footer_logo{
+    max-height: 500px;
+  }
+}
 
 .footer__aboutme + p {
   float: right; }

@@ -1,7 +1,7 @@
 <footer class="footer">
     <div class="footer__container">
       <div class = "footer__aboutinfo">
-        <img class="footer_logo" alt="Karan Khanchandani" src="{{ "/images/karan_side.png" | relURL }}" />
+        <img class="footer_logo" alt="Karan Khanchandani" src="{{ "/images/karan.jpg" | relURL }}" />
       </div>
       <div class = "footer__aboutme">   
         <p>Hi I’m Karan - a full stack developer from Bangalore. I’m currently working at SAP. I also do some freelancing in my spare time. I have a significant experience in designing user interfaces, with strong focus on responsive design, accessibility and performance using latest front-end design techniques.</p>
@@ -10,7 +10,7 @@
           <h2>Availability</h2>
           <p>I’m currently available for a regular full time / part time job or development projects. You can contact me for the same. You can look into my technical expertise in this domain.</p>
       </div>
-    <div class="footer-links">
+    <!-- <div class="footer-links">
       <h2>Links on this site</h2>
       <div class = "footer-links-list">
         {{ range .Site.Menus.main }}
@@ -20,13 +20,17 @@
         </a></li>
         {{ end }}
       </div>
-    </div>
-      <div class="footer__social">
+    </div> -->
+      <div class = "footer__social">
+        <p>You can connect with me on these platforms.</p>
+        <div class = "footer__social__inner"> 
         {{ range .Site.Params.social}}
           <a href="{{ .url | absURL }}" target="blank">
-            <img src="{{ .image | relURL }}">
+            <i class = "{{.icon}}"></i>
+            <!-- <img src="{{ .image | relURL }}"> -->
           </a>
         {{ end }}
+        </div>
       </div>
       <div class="footer__copyright">
         <div class="copy">
