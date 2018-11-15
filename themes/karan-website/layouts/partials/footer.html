@@ -25,7 +25,7 @@
         <p>You can connect with me on these platforms.</p>
         <div class = "footer__social__inner"> 
         {{ range .Site.Params.social}}
-          <a href="{{ .url | absURL }}" target="blank">
+          <a class = "footer__inner__links" href="{{ .url | absURL }}" target="blank">
             <i class = "{{.icon}}"></i>
             <!-- <img src="{{ .image | relURL }}"> -->
           </a>

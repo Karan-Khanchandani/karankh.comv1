@@ -6,25 +6,42 @@
 
 body {
   transition: transform .25s ease-out;
-  margin : 1rem !important;
+  margin : 0 auto;
+  padding: 0 1rem;
 }
 
-*::selection{
-  background-color: #ffe200;
-}
+a:focus{
+  background-color: #ffd900 !important;
+  color: black; }
+
+  .footer__inner__links:focus{
+    background-color: transparent !important;
+    color: black; }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      position: relative;
+      }
+      *:focus, *:active {
+        outline: none; }
+
+  ::selection{
+    background-color: #ffd900
+  }
 
 .fab{
   font-size: calc(2.5rem + 2.5vw);
-  color: black;
+  color: #101F34;
 }
 
-.fab a:hover i{
-  color: yellow;
+.footer__social__inner a:hover .fab, .footer__social__inner a:focus .fab {
+  opacity: 0.5;
+  transition: opacity 0.1s ease-out;
 }
 
-.fab a:hover i{
-  color: yellow;
-}
+
 
 @media (min-width: 52rem) {
   .main-content{
@@ -114,9 +131,12 @@ h6 {
 }
 
 .list__item-inner{
+  padding: 1rem 0;
+    margin: 0 0 2rem;
   border-bottom: 1px solid #ddd;
 }
 .list__link{
+  display: block;
   text-decoration: none;
   color: inherit;
 }
@@ -158,6 +178,7 @@ header {
 
     header .header__nav {
       grid-column: 3/12;
+      align-self: center;
     }
     
     .menu-trigger{
@@ -165,6 +186,7 @@ header {
     }
   }
   header .logo {
+    display: block;
     margin: 0; }
     header .logo #logo_img {
       max-width: 80px; }
@@ -180,10 +202,12 @@ header {
   }
       header .header__nav .nav-group .nav-link {
         transition: background-color 0.1s ease-in;
-        padding: 1rem; }
+        }
         header .header__nav .nav-group .nav-link a {
           transition: color 0.1s ease-in;
           text-decoration: none;
+          display: block;
+          padding: 0.5rem 1rem;
           text-transform: capitalize;
           font-size: 1.25rem;
           font-weight: 500;
@@ -196,7 +220,6 @@ header {
           color: aliceblue; }*/
 
   .menu-trigger {
-  top: 30px;
   position: absolute;
   width: 60px;
   height: 60px;
@@ -217,22 +240,24 @@ header {
     display: block;
     position: absolute;
     z-index: 10;
-    top: 1.5em;
+    top: -70px;
     right: 1em;
     padding: .5em 1em; }
 
     body.open {
-      transform: translateY(450px);
+      transform: translateY(484px);
   }
   
   .header__nav .nav-group {
       position: fixed;
       margin: 0;
       z-index: 9;
-      padding: 2em;
-      top: -450px;
+      padding: 2em !important;
+      top: -484px;
       left: 0;
       width: 100%;
+      background: linear-gradient(#471a64db, #6d3a8ded);
+      color: #fff;
    }
   }
 
@@ -412,14 +437,19 @@ header {
 .footer__aboutme + p {
   float: right; }
 
+.tags__title{
+  margin-top: 3rem;
+}
+
+.meta__link:hover{
+  border-bottom: 2px dotted #aca9a9;
+}
 
 .tags_list_li{
   display: inline-block;
   padding: 1rem;
   margin: 0.5rem 0.5rem;
-  color: #fff;
-  background-color: #101F34;
-  border-radius: 10px;
+  color: #aca9a9;
 }
 .tags_list_li a{
   text-decoration: none;
