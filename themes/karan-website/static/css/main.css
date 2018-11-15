@@ -159,7 +159,7 @@ header {
   padding-top: 1rem; 
   margin-bottom: 7vw;
   }
-  @media (min-width: 52rem) {
+  @media (min-width: 63rem) {
     header {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
@@ -235,7 +235,13 @@ header {
   text-transform: uppercase;
   letter-spacing: 1.5px; }
 
-@media all and (max-width: 1024px) {
+  /* @media all and (min-width: 52rem) and (max-width : 63rem) {
+    .menu-trigger {
+      top: 0px;
+     }
+  } */
+
+@media all and (max-width: 63rem) {
   .menu-trigger {
     display: block;
     position: absolute;
