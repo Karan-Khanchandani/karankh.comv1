@@ -2,6 +2,7 @@
 title: "Karan"
 date: 2018-10-13T10:52:37+05:30
 tags: ["part2", "part3", "part4"]
+categories : []
 ---
 
 ## Summary:

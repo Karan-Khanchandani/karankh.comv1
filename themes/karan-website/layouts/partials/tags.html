@@ -1,5 +1,4 @@
-<section class="tags">
-        <p class="tags__title">You can browse similar articles by going to these links.</p>
+<section class="tags">        
         <div class="tags__list">
           {{ range $i := (slice "tags") }}
             {{ with ($.Param $i) }}

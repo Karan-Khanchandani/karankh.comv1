@@ -21,6 +21,12 @@
                   <a class="list__link" href="{{ .URL | relLangURL }}">
                   <h2>{{ .Title }}</h2>
                  </a>
+                 {{$tags := .Param "tags"}}
+                 {{ range $i := (slice $tags) }}
+                        {{range $k := $i}}
+                        <a class="meta__link" href="{{ relLangURL (print "/tags/" $k | urlize) }}">#{{$k}}</a>
+                  {{ end }}
+                  {{end}}
                 </div>
               
             </li>

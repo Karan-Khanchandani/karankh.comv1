@@ -9,8 +9,13 @@ body {
   margin : 0 auto;
   padding: 0 1rem;
 }
-
+a{
+  text-decoration: none;
+  color:  inherit !important;
+  border-bottom: 3px solid #ffd900;
+}
 a:focus{
+ 
   background-color: #ffd900 !important;
   color: black; }
 
@@ -115,7 +120,13 @@ h4,
 h5,
 h6 {
   font-family: 'Nunito', sans-serif;
-  font-weight: bold; }
+  font-weight: bold;
+  margin: 0.5em 0;
+}
+
+h1{
+  font-size: calc(1rem + 2vw);
+}
 
 
 .post__title, .list__title{
@@ -139,6 +150,7 @@ h6 {
   display: block;
   text-decoration: none;
   color: inherit;
+  border : none;
 }
 
 button,
@@ -158,6 +170,9 @@ a {
 header {
   padding-top: 1rem; 
   margin-bottom: 7vw;
+  }
+  header .logo{
+    border-bottom: none;
   }
   @media (min-width: 63rem) {
     header {
@@ -209,6 +224,7 @@ header {
           display: block;
           padding: 0.5rem 1rem;
           text-transform: capitalize;
+          border-bottom: none;
           font-size: 1.25rem;
           font-weight: 500;
           color: inherit;
@@ -287,6 +303,10 @@ header {
     max-width: 100rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
+ }
+
+ .footer a{
+   border-bottom: none;
  }
  
  .footer-links-list{
@@ -447,8 +467,11 @@ header {
   margin-top: 3rem;
 }
 
-.meta__link:hover{
+.meta__link{
   border-bottom: 2px dotted #aca9a9;
+  margin-right: 0.5rem;
+  font-family: 'Merriweather' !important;
+  color: #777;
 }
 
 .tags_list_li{
@@ -489,3 +512,41 @@ header {
     border: solid 1px;
     display: block;
     line-height: 28px; }
+
+
+ @media (min-width: 52rem) {
+      .contactme{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+      }
+    
+      .contactme_devenquiry{
+        grid-column: 1/8;
+        grid-row:  1;
+      }
+    
+      .contactme_consulting{
+        grid-column: 1/8;
+        grid-row:  2;
+      }
+
+      .contactme_just{
+        grid-column: 1/8;
+        grid-row:  3;
+      }
+
+      .contactme_note{
+        grid-column: 10/13;
+        grid-row: 1;
+      }
+    }
+
+    .contactme_note{
+      margin-top: 1.5em;
+    }
+
+    .size-2x{
+      font-size: calc(1em + .5vw);
+      margin-bottom: 1.5em;
+      font-weight: 300;
+    }
