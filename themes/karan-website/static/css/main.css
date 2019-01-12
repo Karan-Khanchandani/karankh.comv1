@@ -14,6 +14,18 @@ a{
   color:  inherit !important;
   border-bottom: 3px solid #ffd900;
 }
+
+p{
+  margin-bottom: 1rem;
+}
+
+pre {
+  background-color: #23241f;
+  line-height: 1.7 !important;
+  padding: 1rem;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
 a:focus{
  
   background-color: #ffd900 !important;
@@ -106,12 +118,16 @@ dd, ul, ol {
   padding: 0;
   list-style-type: none; }
 
+.post__content ul{
+  margin-bottom: 1rem;
+}
+
 body {
   font-family: 'Merriweather', serif;
   font-weight: 300;
   line-height: 2;
   letter-spacing: 0.5px; 
-  font-size: 1rem; }
+  font-size: calc(0.9rem + 0.25vw); }
 
 h1,
 h2,

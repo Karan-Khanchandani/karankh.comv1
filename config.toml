@@ -18,7 +18,7 @@ footnotereturnlinkcontents = "↩"
 
 # enables ```lang ``` style syntax highlighted blocks
 pygmentsCodeFences = true
-pygmentsStyle = "murphy"
+pygmentsStyle = "monokai"
 
 [permalinks]
     post = "/post/:year/:month/:day/:slug/"
