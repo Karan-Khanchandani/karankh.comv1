@@ -58,6 +58,9 @@ a:focus{
   transition: opacity 0.1s ease-out;
 }
 
+.not_found{
+  text-align: center;
+}
 
 
 @media (min-width: 52rem) {

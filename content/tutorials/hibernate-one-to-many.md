@@ -313,5 +313,4 @@ public class MainClass {
 }
 ```
 Here make sure to map the parent child references properly in the code. Otherwise it won't work properly.
-
 Thats it! Once the program runs you can see that the entries have been created in the database. You can learn more about Hibernate by following the its [documentation](http://docs.jboss.org/hibernate/annotations/3.5/reference/en/html_single/) page. It has tons of examples with great explaination.
