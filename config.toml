@@ -1,5 +1,4 @@
-#baseURL = "https://www.karankhanchandani.com"
-baseURL = "/"
+baseURL = "https://www.karankhanchandani.com"
 languageCode = "en-us"
 title = "Karan Khanchandani"
 defaultContentLanguage = "en"

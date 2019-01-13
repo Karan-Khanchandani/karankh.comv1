@@ -1,135 +1,17 @@
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ .Title }} | {{ .Site.Title }}</title>
-      <link rel="stylesheet" href="www.karankhanchandani.com/css/main.css" />
-      <link rel="shortcut icon" type="image/x-icon" href="www.karankhanchandani.com/images/favicon.png" />
-    <!-- Start of Open Graph -->
-      <meta property="og:title" content="{{ .Title }}">
-      {{ if .IsPage }}
-      <meta property="og:type" content="article">
-      <meta property="article:published_time" content="{{ .Date.Format "2006-01-02" }}">
-      {{ else }}
-      <meta property="og:type" content="website">
-      {{ end }}
-      <meta property="og:description" content="{{ .Description }}">
-      <meta property="og:url" content="{{ .Permalink }}">
-      <meta property="og:site_name" content="{{ .Site.Title }}">
-      {{ if .Params.image }}
-      <meta property="og:image" content="{{ .Params.image | absURL }}">
-      {{ end }}
-      {{ range .Params.tags }}
-      <meta property="og:tags" content="{{ . }}">
-      {{ end }}
-    <!-- End of Open Graph -->
-    <!-- Todo Other share options -->
-    {{ if .Site.GoogleAnalytics }}
-      <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-      ga('create', '{{ .Site.GoogleAnalytics }}', 'auto');
-      ga('send', 'pageview');
-      </script>
-    {{ end }}
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  </head>
+{{partial "head" .}}
 
 <header>
-    {{ $baseurl := .Site.BaseURL }}
-      <a class = "logo" href="www.karankhanchandani.com/">
-        <img id = "logo_img" src="www.karankhanchandani.com/images/favicon.png" alt="Karan Khanchandani">
-      </a>
-    <nav class ="header__nav" id = "header__nav">
-      <button class="menu-trigger" aria-controls="main-nav" aria-expanded="false" id="js-menu-trigger" aria-label="Site Menu">
-        <svg aria-hidden="true" focusable="false" viewBox="0 0 512 512" width="100%" height="100%">
-            <path fill="#000" d="M491.318 235.318h-470.636c-11.422 0-20.682 9.259-20.682 20.682s9.26 20.682 20.682 20.682h470.636c11.423 0 20.682-9.259 20.682-20.682 0-11.422-9.259-20.682-20.682-20.682zM491.318 78.439h-470.636c-11.422 0-20.682 9.26-20.682 20.682 0 11.422 9.26 20.682 20.682 20.682h470.636c11.423 0 20.682-9.26 20.682-20.682 0-11.422-9.259-20.682-20.682-20.682zM491.318 392.197h-470.636c-11.422 0-20.682 9.259-20.682 20.682s9.26 20.682 20.682 20.682h470.636c11.423 0 20.682-9.259 20.682-20.682s-9.259-20.682-20.682-20.682z"></path></svg>
-    </button>
-      {{ partial "menu.html" . }}
-    </nav>
-
-      <script type="text/javascript">
-          (function(){
-          var menu_trigger = document.getElementById('js-menu-trigger'),
-          icon         = document.getElementById('js-menu-trigger__icon'),
-          body         = document.getElementsByTagName("body")[0],
-          nav          = document.getElementById('nav-group'),
-          open         = false;
-
-          menu_trigger.addEventListener('click', toggleMenu, false);
-
-          function toggleMenu(e) {
-              if(!open) {
-                  open = true;
-                  body.classList.add('open');
-                  this.classList.add('active');
-                  this.setAttribute('aria-expanded', 'true');
-                  nav.style.display = "block";
-              }
-              else {
-                  body.classList.remove('open');
-                  this.classList.remove('active');
-                  this.setAttribute('aria-expanded', 'false');
-                  nav.style.display = "none";
-                  open = false;
-              }
-          }
-      })();
-    </script>
+    {{partial "header" .}}
 </header>
 
 <main class = "main">
     <div class = "not_found">
         {{/*  {{< figure src="/images/lost.gif" caption="" attr="" attrlink="" >}}  */}}
-        <img src ="www.karankhanchandani.com/images/lost.gif"/>
+        <img src ="/images/lost.gif"/>
         <h1>Hey there, seems like you are lost!</h1>
         <p>Looks like the page you’re looking for does not exist, or the link that got you here is outdated or broken.</p>
         <p> You may find what you’re looking for in one of the sections available in the menu at the top right of this page.</p>
      </div>
 </main>
 
-<footer class="footer">
-    <div class="footer__container">
-      <div class = "footer__aboutinfo">
-        <img class="footer_logo" alt="Karan Khanchandani" src="www.karankhanchandani.com/images/karan.jpg" />
-      </div>
-      <div class = "footer__aboutme">   
-        <p>Hi I’m Karan - a full stack developer from Bangalore. I’m currently working at SAP. I also do some freelancing in my spare time. I have a significant experience in designing user interfaces, with strong focus on responsive design, accessibility and performance using latest front-end design techniques.</p>
-      </div>
-      <div class="availability">
-          <h2>Availability</h2>
-          <p>I’m currently available for a regular full time / part time job or development projects. You can contact me for the same. You can look into my technical expertise in this domain.</p>
-      </div>
-    <!-- <div class="footer-links">
-      <h2>Links on this site</h2>
-      <div class = "footer-links-list">
-        {{ range .Site.Menus.main }}
-        <li><a
-          href="{{ if hasPrefix .URL "//"}} {{ .URL }} {{ else }} //localhost:1313{{ .URL | relURL }} {{ end }}">
-            {{ .Name }}
-        </a></li>
-        {{ end }}
-      </div>
-    </div> -->
-      <div class = "footer__social">
-        <p>You can connect with me on these platforms.</p>
-        <div class = "footer__social__inner"> 
-        {{ range .Site.Params.social}}
-          <a class = "footer__inner__links" href="{{ .url | absURL }}" target="blank">
-            <i class = "{{.icon}}" title = "{{.name}}"></i>
-            <!-- <img src="{{ .image | relURL }}"> -->
-          </a>
-        {{ end }}
-        </div>
-      </div>
-      <div class="footer__copyright">
-        <div class="copy">
-          <span>© Karan Khanchandani 2018</span>
-        </div>
-        <div class="contact">
-          <a href="mailto:karan.khanchandani94@gmail.com">karan.khanchandani94@gmail.com</a>
-        </div>
-      </div>
-    </div>
-  </footer>
+{{partial "footer" .}}

@@ -2,7 +2,7 @@
 <html lang="{{ .Site.LanguageCode }}">
   {{ $baseurl := .Site.BaseURL }}
       <a class = "logo" href="//www.karankhanchandani.com/">
-        <img id = "logo_img" src="{{ "/images/favicon.png" | relURL }}" alt="Karan Khanchandani">
+        <img id = "logo_img" src="{{ "/images/favicon.png" | absURL }}" alt="Karan Khanchandani">
       </a>
     <nav class ="header__nav" id = "header__nav">
       <button class="menu-trigger" aria-controls="main-nav" aria-expanded="false" id="js-menu-trigger" aria-label="Site Menu">
