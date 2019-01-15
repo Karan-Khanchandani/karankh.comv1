@@ -27,6 +27,12 @@
                         <a class="meta__link" href="{{ relLangURL (print "/tags/" $k | urlize) }}">#{{$k}}</a>
                   {{ end }}
                   {{end}}
+                  {{$tags := .Param "categories"}}
+                 {{ range $i := (slice $tags) }}
+                        {{range $k := $i}}
+                        <a class="meta__link" href="{{ relLangURL (print "/categories/" $k | urlize) }}">#{{$k}}</a>
+                  {{ end }}
+                  {{end}}
                 </div>
               
             </li>

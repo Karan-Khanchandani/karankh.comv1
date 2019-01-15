@@ -1,6 +1,8 @@
 ---
 title: "How to persist a one to many relationship using Hibernate"
 date: 2019-01-12T11:31:48+05:30
+tags: ["gradle", "hibernate", "onetomany"]
+categories : ["java"]
 ---
 
 Many times during the software development process we have to create database and define relationships between tables. This is a really time consuming and error prone task and even if you forget to add a column or constrant it is a painful task to do. So most of times people use Object Relational Mapper(ORM) for this purpose. Hibernate is one of the ORM that is used for mapping the objects to the relational model where entities/classes are mapped to tables, instances are mapped to rows and attributes of instances are mapped to columns of table.
@@ -313,4 +315,5 @@ public class MainClass {
 }
 ```
 Here make sure to map the parent child references properly in the code. Otherwise it won't work properly.
+
 Thats it! Once the program runs you can see that the entries have been created in the database. You can learn more about Hibernate by following the its [documentation](http://docs.jboss.org/hibernate/annotations/3.5/reference/en/html_single/) page. It has tons of examples with great explaination.

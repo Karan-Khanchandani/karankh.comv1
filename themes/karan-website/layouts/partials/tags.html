@@ -9,11 +9,6 @@
                 {{ end }}
             {{ end }}
           {{ end }}
-        </div>
-</section>
-
-<section class="categories">
-        <div class="tags__list">
           {{ range $i := (slice "categories") }}
             {{ with ($.Param $i) }}
                 {{ range $k := . }}

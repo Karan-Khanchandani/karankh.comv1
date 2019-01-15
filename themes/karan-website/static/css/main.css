@@ -19,6 +19,13 @@ p{
   margin-bottom: 1rem;
 }
 
+.inline_code{
+  color: red;
+  border: 1px solid rgb(221, 220, 220);
+  border-radius: 1px;
+  background-color: blanchedalmond;
+}
+
 pre {
   background-color: #23241f;
   line-height: 1.7 !important;
@@ -121,7 +128,7 @@ dd, ul, ol {
   padding: 0;
   list-style-type: none; }
 
-.post__content ul{
+.post__content ul, ol{
   margin-bottom: 1rem;
 }
 
@@ -146,6 +153,15 @@ h6 {
 h1{
   font-size: calc(1rem + 2vw);
 }
+
+h2{
+  font-size: calc(1rem + 1.4vw);
+}
+
+h3{
+  font-size: calc(1rem + 0.8vw);
+}
+
 
 
 .post__title, .list__title{
@@ -487,17 +503,23 @@ header {
 }
 
 .meta__link{
-  border-bottom: 2px dotted #aca9a9;
+  border-bottom: 2px dotted #615e5e;
   margin-right: 0.5rem;
   font-family: 'Merriweather' !important;
   color: #777;
 }
 
+.meta__link{
+  border-bottom: 2px dotted #615e5e;
+  margin-right: 0.5rem;
+  font-family: 'Merriweather' !important;
+  color: #615e5e !important;
+}
+
 .tags_list_li{
   display: inline-block;
   padding: 1rem;
-  margin: 0.5rem 0.5rem;
-  color: #aca9a9;
+  color: #615e5e;
 }
 .tags_list_li a{
   text-decoration: none;
