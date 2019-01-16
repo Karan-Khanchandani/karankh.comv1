@@ -591,3 +591,56 @@ header {
       margin-bottom: 1.5em;
       font-weight: 300;
     }
+
+@media print{
+
+  @page {
+    margin: 50pt 25pt; /*50 is good*/
+  }
+  
+  @page :first{
+    margin-top: 100pt; /*100 is good*/
+  }
+
+  a[href^="http"]:not([href*="example.com"]):after {
+    content: " (" attr(href) ")";
+  }
+
+  .post__content:after{
+    content: "This article may not be the latest one. To get latest updates, contact me  or any other information please visit my website www.karankhanchandani.com"
+  }
+
+  header, .footer, .tags{
+    display: none;
+  }
+
+  
+  .highlight pre{
+    color:#f8f8f2;
+    background-color:#272822;
+    -moz-tab-size:4;
+    -o-tab-size:4;
+    tab-size:4;
+  }
+
+  body {-webkit-print-color-adjust: exact;}
+
+  pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  
+  p, img, table {
+    page-break-inside: avoid;
+    orphans: 2;
+    widows: 2;
+  }
+
+  h1, h2, h3, h4, h5, h6 ,a, blockquote{
+    page-break-inside: avoid;
+  }
+
+  .highlight pre{
+    overflow: unset;
+  }
+}
