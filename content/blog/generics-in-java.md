@@ -212,7 +212,7 @@ public static T max(List<T> objects){
 
 1. 1. &nbsp;&nbsp;&nbsp;&nbsp;This code will throw compile error because we can define the type parameter on Class but on method the correct way of defining the type parameter is <code class = "inline_code">public static &lt;T&gt; T max(List&lt;T&gt; objects);</code>
 2. 2.&nbsp;&nbsp;&nbsp;&nbsp;The second problem is that we are not sure that the Type parameter that we are passing is comparable or not, i.e, it has implemented the Comparable interface or not. You can ensure that by using <code class = "inline_code">List&lt;T extends Comparable&lt;? extends T&gt;&gt; objects</code> as method parameter.
-3. 3. &nbsp;&nbsp;&nbsp;&nbsp;If we want to implement comparision on different property of object, we can do so in this code.
+3. 3. &nbsp;&nbsp;&nbsp;&nbsp;If we want to implement comparision on different property of object, we cannot do so in this code.
 
 So after fixing the errors, the above code looks like this
 ```java
