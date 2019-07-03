@@ -38,16 +38,16 @@ pygmentsStyle = "monokai"
     identifier = "blog"
     url = "/blog/"
     weight = 2
-[[menu.main]]
-    name = "Projects"
-    identifier = "projects"
-    url = "/projects/"
-    weight = 3
-[[menu.main]]
-    name = "Skills"
-    identifier = "skills"
-    url = "/skills/"
-    weight = 4
+#[[menu.main]]
+#    name = "Projects"
+#    identifier = "projects"
+#    url = "/projects/"
+#    weight = 3
+#[[menu.main]]
+#    name = "Skills"
+#    identifier = "skills"
+#    url = "/skills/"
+#    weight = 4
 [[menu.main]]
     name = "Tutorials"
     identifier = "tutorials"
@@ -97,11 +97,11 @@ pygmentsStyle = "monokai"
   name = "Hackerrank"
   url = "https://www.hackerrank.com/ronin_47"
   icon = "fab fa-hackerrank"
-[[params.social]]
-  name = "Facebook"
-  url = "https://www.facebook.com/profile.php?id=100009782580452"
-  icon = "fab fa-facebook-square"
-  [[params.social]]
-  name = "Instagram"
-  url = "https://www.instagram.com/karankhanchandani47/"
-  icon = "fab fa-instagram"   
+#[[params.social]]
+#  name = "Facebook"
+#  url = "https://www.facebook.com/profile.php?id=100009782580452"
+#  icon = "fab fa-facebook-square"
+#  [[params.social]]
+#  name = "Instagram"
+#  url = "https://www.instagram.com/karankhanchandani47/"
+#  icon = "fab fa-instagram"   
