@@ -4,37 +4,25 @@
         <img class="footer_logo" alt="Karan Khanchandani" src="{{ "/images/karan.jpg" | absURL }}" />
       </div>
       <div class = "footer__aboutme">   
-        <p>Hi I’m Karan - a full stack developer from Bangalore. I’m currently a Software Development Engineer at SIXT Research &amp; Development India. There I work as a backend engineer covering all areas Software Development life cycle - designing, giving estimates, development, testing and more. I also do some freelancing in my spare time. I can also design user interfaces, with strong focus on responsive design, accessibility and performance using latest front-end design techniques.</p>
+        <p>Hi I’m Karan - a full stack developer from Bangalore with more focus on backend development. I have more than 5 years of experience in software industry. I’m currently a Software Engineer (Product Engineer) at <a class = "link" href = "https://www.gojek.io/">Gojek Tech</a>, India. There I work as a backend engineer covering all areas Software Development life cycle - design, estimation, development, testing, and deployment. I have created scalable systems and services with focus on performance, fault tolerance, availability and security. I have worked in payments, rental and logistics platforms and have deep knowledge of the domain. I do some freelancing in my spare time. I can also design user interfaces, with strong focus on responsive design, accessibility and performance using latest front-end design techniques.</p>
       </div>
       <div class="availability">
           <h2>Availability</h2>
-          <p>I’m currently working full time and hence can only take up freelance project with not so strict deadlines. You can contact me for the same. You can look into my technical expertise in this domain.</p>
+          <p>I’m currently working full time and hence can only take up small freelance projects with relaxed deadlines. I'm currently looking out for full time/hybrid remote opportunities (or work from home). You can contact me for the same. Please have a look at my <a href = "https://drive.google.com/file/d/1IhOdtwTc6nfiJ1WSVqCRod8cAv38nbAA/view?usp=sharing">resume</a>.</p>
       </div>
-    <!-- <div class="footer-links">
-      <h2>Links on this site</h2>
-      <div class = "footer-links-list">
-        {{ range .Site.Menus.main }}
-        <li><a
-          href="{{ if hasPrefix .URL "//"}} {{ .URL }} {{ else }} //localhost:1313{{ .URL | relURL }} {{ end }}">
-            {{ .Name }}
-        </a></li>
-        {{ end }}
-      </div>
-    </div> -->
       <div class = "footer__social">
         <p>You can connect with me on these platforms.</p>
         <div class = "footer__social__inner"> 
         {{ range .Site.Params.social}}
           <a class = "footer__inner__links" href="{{ .url | absURL }}" target="blank">
             <i class = "{{.icon}}" title = "{{.name}}"></i>
-            <!-- <img src="{{ .image | relURL }}"> -->
           </a>
         {{ end }}
         </div>
       </div>
       <div class="footer__copyright">
         <div class="copy">
-          <span>© Karan Khanchandani 2018</span>
+          <span>© Karan Khanchandani 2021</span>
         </div>
         <div class="contact">
           <a href="mailto:karan.khanchandani94@gmail.com">karan.khanchandani94@gmail.com</a>

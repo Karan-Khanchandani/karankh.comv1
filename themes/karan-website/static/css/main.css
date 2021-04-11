@@ -350,9 +350,13 @@ header {
     margin-bottom: 2rem;
  }
 
- .footer a{
+ .footer__social a{
    border-bottom: none;
  }
+
+ .footer__copyright a{
+  border-bottom: none;
+}
  
  .footer-links-list{
   display: flex;

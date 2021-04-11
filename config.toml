@@ -89,14 +89,14 @@ pygmentsStyle = "monokai"
   name = "Stackoverflow"
   url = "https://stackoverflow.com/users/3873874"
   icon = "fab fa-stack-overflow"
-[[params.social]]
-  name = "Codepen"
-  url = "https://codepen.io/Ronin_47/"
-  icon = "fab fa-codepen"
-[[params.social]]
-  name = "Hackerrank"
-  url = "https://www.hackerrank.com/ronin_47"
-  icon = "fab fa-hackerrank"
+#[[params.social]]
+#  name = "Codepen"
+#  url = "https://codepen.io/Ronin_47/"
+#  icon = "fab fa-codepen"
+#[[params.social]]
+#  name = "Hackerrank"
+#  url = "https://www.hackerrank.com/ronin_47"
+#  icon = "fab fa-hackerrank"
 #[[params.social]]
 #  name = "Facebook"
 #  url = "https://www.facebook.com/profile.php?id=100009782580452"
